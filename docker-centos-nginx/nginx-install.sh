@@ -61,7 +61,8 @@ cd nginx-$NGINX_VERSION
 --with-http_ssl_module \
 #--with-pcre=$ROOT/pcre/pcre-$PCRE_VERSION \
 #--with-zlib=$ROOT/zlib/zlib-$ZLIB_VERSION \
---with-openssl=$ROOT/openssl/openssl-$OPEN_SSL_VERSION
+#--with-openssl=$ROOT/openssl/openssl-$OPEN_SSL_VERSION
+--with-openssl=/app/build/faceye-docker/docker-centos-nginx/openssl/openssl-1.0.2l
 make
 make install
 #Start Nginx default port:80

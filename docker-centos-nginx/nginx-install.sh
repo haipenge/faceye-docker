@@ -9,6 +9,7 @@
 #ROOT=$(dirname $(cd "$(dirname "$0")";pwd))
 ROOT=$(cd $(dirname '$0');pwd)
 NGINX_HOME='/usr/local/nginx'
+DOWNLOAD_HOME='/tmp'
 cd $ROOT
 #Prepare Dir
 mkdir -p nginx openssl pcre zlib
@@ -43,7 +44,7 @@ make install
 ###################################
 #Install openssl
 cd $ROOT/openssl
-wget http://www.openssl.org/source/openssl-$OPEN_SSL_VERSION.tar.gz .
+wget https://www.openssl.org/source/openssl-$OPEN_SSL_VERSION.tar.gz .
 tar -zxvf openssl-$OPEN_SSL_VERSION.tar.gz
 
 ###################################
@@ -57,8 +58,8 @@ cd nginx-$NGINX_VERSION
 --conf-path=$NGINX_HOME/conf/nginx.conf \
 --pid-path=$NGINX_HOME/nginx.pid \
 --with-http_ssl_module \
---with-pcre=$ROOT/pcre/pcre-$PCRE_VERSION \
---with-zlib=$ROOT/zlib/zlib-$ZLIB_VERSION \
+#--with-pcre=$ROOT/pcre/pcre-$PCRE_VERSION \
+#--with-zlib=$ROOT/zlib/zlib-$ZLIB_VERSION \
 --with-openssl=$ROOT/openssl/openssl-$OPEN_SSL_VERSION
 make
 make install

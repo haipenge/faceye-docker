@@ -8,7 +8,7 @@
 #bin=`cd "$bin"; pwd`
 #ROOT=$(dirname $(cd "$(dirname "$0")";pwd))
 ROOT=$(cd $(dirname '$0');pwd)
-NGINX_HOME='/usr/share/nginx'
+NGINX_HOME='/usr/local/nginx'
 cd $ROOT
 #Prepare Dir
 mkdir -p nginx openssl pcre zlib

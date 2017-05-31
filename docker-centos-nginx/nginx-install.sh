@@ -25,7 +25,7 @@ yum -y install wget
 yum -y update
 ###################################
 #Install pcre
-cd $ROOT/pcre
+#cd $ROOT/pcre
 #wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$PCRE_VERSION.tar.gz .
 #tar -zxvf pcre-$PCRE_VERSION.tar.gz
 #cd pcre-$PCRE_VERSION
@@ -43,26 +43,28 @@ cd $ROOT/pcre
 #make install
 ###################################
 #Install openssl
-cd $ROOT/openssl
-wget https://www.openssl.org/source/openssl-$OPEN_SSL_VERSION.tar.gz .
+#cd $ROOT/openssl
+#wget https://www.openssl.org/source/openssl-$OPEN_SSL_VERSION.tar.gz .
 #wget https://www.openssl.org/source/openssl-1.0.2l.tar.gz .
-tar -zxvf openssl-$OPEN_SSL_VERSION.tar.gz
-
+#tar -zxvf openssl-$OPEN_SSL_VERSION.tar.gz
+yum -y install pcre pcre-devel zlib zlib-devel openssl openssl-devel
 ###################################
 #Install nginx
 cd $ROOT/nginx
 wget http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz .
 tar -zxvf nginx-$NGINX_VERSION.tar.gz
 cd nginx-$NGINX_VERSION
-./configure --sbin-path=$NGINX_HOME \
+./configure --with-ipv6 --with-http_ssl_module \
+--sbin-path=$NGINX_HOME \
 --prefix=$NGINX_HOME \
 --conf-path=$NGINX_HOME/conf/nginx.conf \
 --pid-path=$NGINX_HOME/nginx.pid \
---with-http_ssl_module \
+
+#--with-http_ssl_module \
 #--with-pcre=$ROOT/pcre/pcre-$PCRE_VERSION \
 #--with-zlib=$ROOT/zlib/zlib-$ZLIB_VERSION \
 #--with-openssl=$ROOT/openssl/openssl-$OPEN_SSL_VERSION
---with-openssl=/app/build/faceye-docker/docker-centos-nginx/openssl/openssl-1.0.2l
+#--with-openssl=/app/build/faceye-docker/docker-centos-nginx/openssl/openssl-1.0.2l
 make
 make install
 #Start Nginx default port:80

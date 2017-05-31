@@ -26,21 +26,21 @@ yum -y update
 ###################################
 #Install pcre
 cd $ROOT/pcre
-wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$PCRE_VERSION.tar.gz .
-tar -zxvf pcre-$PCRE_VERSION.tar.gz
-cd pcre-$PCRE_VERSION
-./configure
-make
-make install
+#wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-$PCRE_VERSION.tar.gz .
+#tar -zxvf pcre-$PCRE_VERSION.tar.gz
+#cd pcre-$PCRE_VERSION
+#./configure
+#make
+#make install
 ###################################
 #Install zlib
-cd $ROOT/zlib
-wget http://zlib.net/zlib-$ZLIB_VERSION.tar.gz
-tar -zxvf zlib-$ZLIB_VERSION.tar.gz
-cd zlib-$ZLIB_VERSION
-./configure
-make
-make install
+#cd $ROOT/zlib
+#wget http://zlib.net/zlib-$ZLIB_VERSION.tar.gz
+#tar -zxvf zlib-$ZLIB_VERSION.tar.gz
+#cd zlib-$ZLIB_VERSION
+#./configure
+#make
+#make install
 ###################################
 #Install openssl
 cd $ROOT/openssl

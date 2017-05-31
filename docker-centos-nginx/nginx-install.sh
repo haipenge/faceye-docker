@@ -16,7 +16,7 @@ mkdir -p nginx openssl pcre zlib
 #Version Config
 PCRE_VERSION=8.40
 ZLIB_VERSION=1.2.11
-OPEN_SSL_VERSION=1.0.21
+OPEN_SSL_VERSION=1.0.2l
 NGINX_VERSION=1.13.0
 #####Prepare######################
 yum -y install gcc automake autoconf libtool make
@@ -45,6 +45,7 @@ cd $ROOT/pcre
 #Install openssl
 cd $ROOT/openssl
 wget https://www.openssl.org/source/openssl-$OPEN_SSL_VERSION.tar.gz .
+#wget https://www.openssl.org/source/openssl-1.0.2l.tar.gz .
 tar -zxvf openssl-$OPEN_SSL_VERSION.tar.gz
 
 ###################################

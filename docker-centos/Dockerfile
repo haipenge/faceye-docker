@@ -1,3 +1,3 @@
 #From centos:version
-FROM centos:7
+FROM centos
 MAINTAINER docker_user haipenge@gmail.com

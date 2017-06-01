@@ -1,1 +1,1 @@
-docker run -itd -v /opt/data /app/data centos-7-alisql /bin/bash
+docker run -itd -v /opt/data:/app/data centos-7-alisql /bin/bash

@@ -10,5 +10,6 @@ if [ ! -x "$datadir/data"]; then
   ./scripts/mysql_install_db --user=mysql --basedir=/opt/alisql --datadir=$datadir/data
   mv /tmp/my.cnf /etc
   service mysqld start
+else
+  service mysqld start
 fi
-

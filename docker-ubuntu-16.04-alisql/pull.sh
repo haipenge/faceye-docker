@@ -1,0 +1,1 @@
+docker pull docker.id/haipenge/ubuntu-16.04-alisql

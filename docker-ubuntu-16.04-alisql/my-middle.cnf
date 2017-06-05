@@ -1,10 +1,10 @@
 [mysqld]
 socket = /app/data/alisql/data3029/tmp/mysql.sock
-datadir = /app/data/alisql/data3029/dbs3029
+datadir = /app/data/alisql/data3029/data
 tmpdir = /app/data/alisql/data3029/tmp
 port = 3029
 back_log = 3000
-character_set_server = utf8
+character_set_server = utf8 
 max_connect_errors = 100
 max_connections = 4050
 max_user_connections = 4050

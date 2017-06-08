@@ -205,6 +205,8 @@ loose_rpl_semi_sync_master_trace_level = 1
 loose_rpl_semi_sync_slave_enabled = ON
 loose_rpl_semi_sync_master_enabled = ON
 loose_rpl_semi_sync_master_wait_no_slave = ON
+#master-slave config:
+server-id = 0
 
 [mysqldump]
 quick
